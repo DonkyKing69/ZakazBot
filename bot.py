@@ -74,6 +74,7 @@ async def parse(message: types.Message):
             try:
                 url = message.text
                 answer = AvitoParser.run(url)
+                print(AvitoParser.run('http://httpbin.org/ip'))
                 alias = answer.split('/')[-1]
                 user = message.from_user.id
 
@@ -95,10 +96,6 @@ async def parse(message: types.Message):
                 answer = "Ваша ссылка на авито не валидна!"
         else:
             answer = 'Не могу найти ссылку на авито...'
-        if "my_ip" in in message.text:
-            url = r"http://httpbin.org/ip"
-            answer = AvitoParser.run(url)
-            print(answer)
         await message.reply(answer)
     else:
         await bot.send_message(message.from_user.id,'Выберите период' , reply_markup=bot_buttons.choice_period)
