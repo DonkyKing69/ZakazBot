@@ -12,7 +12,7 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 domain = domain['domain']
 
 def getHtml(url):
-    return requests.get(url, headers=headers, proxies={"http": "http://1mqtydna:u3cu3eye@194.39.101.70:15652"}).text   # TODO Если нужно использовать прокси
+    return requests.get(url, headers=headers, proxies={"http": "http://xozovd6a:nx8hhvba@92.255.251.28:15278"}).text   # TODO Если нужно использовать прокси
 #     return requests.get(url, headers=headers).text
 
 def parse(html):
