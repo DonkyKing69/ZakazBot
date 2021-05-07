@@ -12,8 +12,8 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 domain = domain['domain']
 
 def getHtml(url):
-    # return requests.get(url, headers=headers, proxies=proxies).text   # TODO Если нужно использовать прокси
-    return requests.get(url, headers=headers).text
+    return requests.get(url, headers=headers, proxies=proxies).text   # TODO Если нужно использовать прокси
+#     return requests.get(url, headers=headers).text
 
 def parse(html):
     soup = BeautifulSoup(html, 'lxml')
