@@ -29,6 +29,7 @@ def parse(html):
 
 def run(url):
     html = getHtml(url)
+    print(html)
     title, seller, img_url = parse(html)
     alias = datetime.datetime.now().strftime('%Y%m%d%H%m%S') + random.choice(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
     try:
