@@ -11,7 +11,7 @@ import settings
 import bot_buttons
 import log_handler
 
-API_TOKEN = '1734443248:AAGIjGxNmp3SpVHpENfBuwlOciBi6jTHYas'
+API_TOKEN = '1423684490:AAGpJckkVuIew8Bxv9FV_U7BWtAcwYi1PpA'
 
 logging.basicConfig(level=logging.INFO)
 
