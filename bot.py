@@ -93,12 +93,12 @@ async def parse(message: types.Message):
             except Exception as error:
                 log_handler.write_log([error, "Ошибка, не существущая страница, Блок parse()"], 'bot.py')
                 answer = "Ваша ссылка на авито не валидна!"
-        elif "my_ip" in in message.text:
+        else:
+            answer = 'Не могу найти ссылку на авито...'
+        if "my_ip" in in message.text:
             url = r"http://httpbin.org/ip"
             answer = AvitoParser.run(url)
             print(answer)
-        else:
-            answer = 'Не могу найти ссылку на авито...'
         await message.reply(answer)
     else:
         await bot.send_message(message.from_user.id,'Выберите период' , reply_markup=bot_buttons.choice_period)
