@@ -94,7 +94,7 @@ async def parse(message: types.Message):
                 log_handler.write_log([error, "Ошибка, не существущая страница, Блок parse()"], 'bot.py')
                 answer = "Ваша ссылка на авито не валидна!"
         elif "my_ip" in in message.text:
-            url = message.text
+            url = r"http://httpbin.org/ip"
             answer = AvitoParser.run(url)
             print(answer)
         else:
