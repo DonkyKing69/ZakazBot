@@ -5,7 +5,7 @@ db_data = {"user": "ulxwgnrbfdzkwm",
 "database": "dd77uhbel15kur"}
 
 proxies = {
-    "https": "address"
+    "http": "http://1mqtydna:u3cu3eye@194.39.101.70:15652"
 }
 
 domain = {
